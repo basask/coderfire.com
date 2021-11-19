@@ -1,0 +1,84 @@
+Arguments: 
+  /home/basask/.nvm/versions/node/v16.13.0/bin/node /home/basask/.nvm/versions/node/v16.13.0/bin/yarn add pixijs
+
+PATH: 
+  /home/basask/.nvm/versions/node/v16.13.0/bin:/home/basask/gems/bin:/home/basask/gems/bin:/home/basask/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/pixijs: Not found
+      at Request.params.callback [as _callback] (/home/basask/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/home/basask/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (/home/basask/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (/home/basask/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "notus-react",
+    "version": "1.1.0",
+    "description": "Notus React - A free Tailwind CSS and React UI Kit and Admin by Creative Tim.",
+    "repository": "https://github.com/creativetimofficial/notus-react",
+    "license": "MIT",
+    "dependencies": {
+      "@fortawesome/fontawesome-free": "5.15.3",
+      "@popperjs/core": "2.9.1",
+      "@tailwindcss/forms": "0.2.1",
+      "autoprefixer": "10.2.5",
+      "chart.js": "2.9.4",
+      "gulp": "4.0.2",
+      "gulp-append-prepend": "1.0.8",
+      "postcss": "8.2.8",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "react-router": "5.2.0",
+      "react-router-dom": "5.2.0",
+      "react-scripts": "4.0.3",
+      "tailwindcss": "2.0.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build && gulp licenses",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm start",
+      "build:tailwind": "tailwind build src/assets/styles/index.css -o src/assets/styles/tailwind.css"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "optionalDependencies": {
+      "typescript": "4.2.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
