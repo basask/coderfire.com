@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
@@ -26,7 +26,7 @@ import SecretFriendCreate from "views/secretfriend/SecretFriendCreate";
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter basename="/">
     <IndexNavbar fixed />
     <Switch>
       {/* add routes with layouts */}
@@ -43,6 +43,6 @@ ReactDOM.render(
       <Redirect from="*" to="/" />
     </Switch>
     <Footer />
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );

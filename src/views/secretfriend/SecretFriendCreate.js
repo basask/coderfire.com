@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { encode, decode } from 'js-base64';
+import { encode } from 'js-base64';
 import shuffle from './shuffle';
+import { Link } from "react-router-dom";
 
 const FriendEntry = (props) => {
   const { name, friend } = props;
@@ -13,7 +14,10 @@ const FriendEntry = (props) => {
       </div>
       <div className="w-full px-4 flex-1">
         <span className="text-sm block p-3 text-blueGray-700">
-        <a href={href}>Link</a>
+          <Link 
+            to={href}
+            className="get-started text-white font-bold px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 bg-orange-500 active:bg-orange-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+          >Secret Friend</Link>
         </span>
       </div>
     </div>

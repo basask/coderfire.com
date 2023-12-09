@@ -228,18 +228,13 @@ export default function gameFactory(canvasSize, root, messages = {}, options = {
   }
 
   function redraw() {
-    const [py, px] = pointerData(pointer)
-
     for (let y = 0; y < 9; y++) {
       for (let x = 0; x < 9; x++) {
         let value = board[y][x];
         let editable = value === 0;
-        let currentCell = py === y && px === x;
         value = editable ? solution[y][x] : value;
         positions[y][x].text = `${value === 0 ? '' : value}`;
         positions[y][x].alpha = editable ? 1 : 0.5;
-        // if (solverRunning && editable)
-        //   positions[y][x].style.setColor(currentCell ? '#ff0000' : '#000000')
       }
     }
   }

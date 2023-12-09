@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useParams } from "react-router-dom";
-import { encode, decode } from 'js-base64';
+import { decode } from 'js-base64';
 
 
 const SecretFriend = () => {
